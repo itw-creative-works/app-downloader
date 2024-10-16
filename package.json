@@ -1,0 +1,53 @@
+{
+  "name": "app-downloader",
+  "version": "1.0.0",
+  "description": "Helper module to install package.json downloads",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "test": "npm run prepare && ./node_modules/mocha/bin/mocha test/ --recursive --timeout=10000",
+    "prepare": "node -e \"require('prepare-package')()\"",
+    "prepare:watch": "nodemon -w ./src -e '*' --exec 'npm run prepare'"
+  },
+  "preparePackage": {
+    "input": "./src",
+    "output": "./dist",
+    "replace": {}
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itw-creative-works/app-downloader"
+  },
+  "keywords": [
+    "app-downloader"
+  ],
+  "author": "ITW Creative Works",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itw-creative-works/app-downloader/issues"
+  },
+  "homepage": "https://itwcreativeworks.com",
+  "dependencies": {
+    "downloads-folder": "^3.0.3",
+    "fs-jetpack": "^5.1.0",
+    "itwcw-package-analytics": "^1.0.6",
+    "node-powertools": "^1.5.9",
+    "wonderful-fetch": "^1.1.12"
+  },
+  "devDependencies": {
+    "mocha": "^8.4.0",
+    "prepare-package": "^1.1.13"
+  }
+}
