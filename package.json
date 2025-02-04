@@ -1,6 +1,6 @@
 {
   "name": "app-downloader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Helper module to install package.json downloads",
   "main": "./dist/index.js",
   "scripts": {
@@ -43,8 +43,8 @@
     "downloads-folder": "^3.0.3",
     "fs-jetpack": "^5.1.0",
     "itwcw-package-analytics": "^1.0.6",
-    "node-powertools": "^1.5.9",
-    "wonderful-fetch": "^1.1.12"
+    "node-powertools": "^2.1.4",
+    "wonderful-fetch": "^1.3.1"
   },
   "devDependencies": {
     "mocha": "^8.4.0",
